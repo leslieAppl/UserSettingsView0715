@@ -13,6 +13,7 @@
 		CE51579524BF383F0058277D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE51579324BF383F0058277D /* Main.storyboard */; };
 		CE51579724BF38420058277D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE51579624BF38420058277D /* Assets.xcassets */; };
 		CE51579A24BF38420058277D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE51579824BF38420058277D /* LaunchScreen.storyboard */; };
+		CE5157A224BF408F0058277D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5157A124BF408F0058277D /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		CE51579624BF38420058277D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE51579924BF38420058277D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE51579B24BF38420058277D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE5157A124BF408F0058277D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				CE51578D24BF383F0058277D /* AppDelegate.swift */,
 				CE51578F24BF383F0058277D /* SceneDelegate.swift */,
 				CE51579124BF383F0058277D /* ViewController.swift */,
+				CE5157A124BF408F0058277D /* SettingsViewController.swift */,
 				CE51579324BF383F0058277D /* Main.storyboard */,
 				CE51579624BF38420058277D /* Assets.xcassets */,
 				CE51579824BF38420058277D /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				CE51579224BF383F0058277D /* ViewController.swift in Sources */,
 				CE51578E24BF383F0058277D /* AppDelegate.swift in Sources */,
 				CE51579024BF383F0058277D /* SceneDelegate.swift in Sources */,
+				CE5157A224BF408F0058277D /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +298,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.appl.leslie.UserSettingsView0715;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,7 +316,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.appl.leslie.UserSettingsView0715;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
