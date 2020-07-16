@@ -79,6 +79,9 @@
                                                         <segment title="Medium"/>
                                                         <segment title="Light"/>
                                                     </segments>
+                                                    <connections>
+                                                        <action selector="saveColors:" destination="rCx-q8-Lc1" eventType="valueChanged" id="wvW-18-OEN"/>
+                                                    </connections>
                                                 </segmentedControl>
                                             </subviews>
                                             <constraints>
@@ -102,6 +105,9 @@
                                             <subviews>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2NJ-rW-5nb">
                                                     <rect key="frame" x="310" y="6.5" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="saveEditable:" destination="rCx-q8-Lc1" eventType="valueChanged" id="iNd-kl-2AO"/>
+                                                    </connections>
                                                 </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Editable" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YfI-uM-aJs">
                                                     <rect key="frame" x="24" y="11.5" width="62" height="21"/>
@@ -127,6 +133,9 @@
                                             <subviews>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QEs-FZ-1mf">
                                                     <rect key="frame" x="310" y="6.5" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="saveCorrection:" destination="rCx-q8-Lc1" eventType="valueChanged" id="Ue6-a7-Ec9"/>
+                                                    </connections>
                                                 </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Autocorrection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSs-x4-Xuy">
                                                     <rect key="frame" x="24" y="11.5" width="114" height="21"/>
@@ -152,6 +161,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="fDD-OD-16H"/>
+                    <connections>
+                        <outlet property="controlColors" destination="NbQ-BT-kPH" id="Wxp-Gl-aW8"/>
+                        <outlet property="controlCorrection" destination="QEs-FZ-1mf" id="aZH-J7-hiQ"/>
+                        <outlet property="controlEditable" destination="2NJ-rW-5nb" id="aEa-14-ui8"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HIm-wU-QPb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

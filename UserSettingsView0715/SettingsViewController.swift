@@ -10,16 +10,46 @@ import UIKit
 
 class SettingsViewController: UITableViewController {
 
+    @IBOutlet weak var controlColors: UISegmentedControl!
+    @IBOutlet weak var controlEditable: UISwitch!
+    @IBOutlet weak var controlCorrection: UISwitch!
+    
+    var defaultValues: UserDefaults!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        defaultValues = UserDefaults.standard
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        if let color = defaultValues.object(forKey: "color") as? Int {
+            controlColors.selectedSegmentIndex = color
+        }
+        
+        if let editable = defaultValues.object(forKey: "editable") as? Bool {
+            controlEditable.isOn = editable
+        }
+        
+        if let correction = defaultValues.object(forKey: "correction") as? Bool {
+            controlCorrection.isOn = correction
+        }
     }
-
+    
+    //TODO: Saving the Settings
+    @IBAction func saveColors(_ sender: UISegmentedControl) {
+        let current = sender.selectedSegmentIndex
+        defaultValues.set(current, forKey: "color")
+    }
+    
+    @IBAction func saveEditable(_ sender: UISwitch) {
+        let current = sender.isOn
+        defaultValues.set(current, forKey: "editable")
+    }
+    
+    @IBAction func saveCorrection(_ sender: UISwitch) {
+        let current = sender.isOn
+        defaultValues.set(current, forKey: "correction")
+    }
+    
     // MARK: - Table view data source
 
 //    override func numberOfSections(in tableView: UITableView) -> Int {
