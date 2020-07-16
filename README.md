@@ -7,3 +7,5 @@
 ## Saving the Settings
 
 ## Reading values with specific methods
+
+## Setting values by default

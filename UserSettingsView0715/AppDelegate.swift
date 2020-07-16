@@ -14,7 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        //TODO: Setting values by default
+        let list: [String: Any] = ["color": 0, "editable": true, "correction": true]
+        let defaultValues = UserDefaults.standard
+        defaultValues.register(defaults: list)
         return true
     }
 
