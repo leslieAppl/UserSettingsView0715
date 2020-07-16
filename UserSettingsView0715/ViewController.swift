@@ -23,21 +23,37 @@ class ViewController: UIViewController {
         
         let defaultValues = UserDefaults.standard
         
-        if let color = defaultValues.object(forKey: "color") as? Int {
-            let colorList = [UIColor.black, UIColor.gray, UIColor.lightGray]
-            textEditor.textColor = colorList[color]
-        }
+        ///Reading values with generic method
+//        if let color = defaultValues.object(forKey: "color") as? Int {
+//            let colorList = [UIColor.black, UIColor.gray, UIColor.lightGray]
+//            textEditor.textColor = colorList[color]
+//        }
+//
+//        if let editable = defaultValues.object(forKey: "editable") as? Bool {
+//            textEditor.isEditable = editable
+//        }
+//
+//        if let correction = defaultValues.object(forKey: "correction") as? Bool {
+//            if correction {
+//                textEditor.spellCheckingType = .yes
+//            } else {
+//                textEditor.spellCheckingType = .no
+//            }
+//        }
         
-        if let editable = defaultValues.object(forKey: "editable") as? Bool {
-            textEditor.isEditable = editable
-        }
+        ///Reading values with specific methods
+        let color = defaultValues.integer(forKey: "color")
+        let colorList = [UIColor.darkGray, UIColor.gray, UIColor.lightGray]
+        textEditor.textColor = colorList[color]
         
-        if let correction = defaultValues.object(forKey: "correction") as? Bool {
-            if correction {
-                textEditor.spellCheckingType = .yes
-            } else {
-                textEditor.spellCheckingType = .no
-            }
+        let editable = defaultValues.bool(forKey: "editable")
+        textEditor.isEditable = editable
+        
+        let correction = defaultValues.bool(forKey: "correction")
+        if correction {
+            textEditor.spellCheckingType = .yes
+        } else {
+            textEditor.spellCheckingType = .no
         }
     }
 }
